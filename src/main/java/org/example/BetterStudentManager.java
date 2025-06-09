@@ -12,9 +12,10 @@ public class BetterStudentManager {
 
     public void addStudent(String name, double grade) {
         // This method should add a new student to the list of students
-        Student student = new student();
-        student.name = "James";
-        student.grade = 82;
+        Student student = new Student();
+        student.name = name;
+        student.grade = grade;
+        students.add(student);
 
         System.out.println("Student name:" + student.name);
         System.out.println("Student grade:" + student.grade);
@@ -22,7 +23,7 @@ public class BetterStudentManager {
 
     public void removeStudent(String name) {
         // This method should remove the student with the given name from the list of students
-        String removedStudent = students.remove(name);
+        students.removeIf(student -> student.name.equals(name));
         System.out.println(students);
     }
 
@@ -39,8 +40,9 @@ public class BetterStudentManager {
         // Replace the following line with your implementation
 
         StringBuilder result = new StringBuilder();
-        for (String student : students ) {
-            result.append(student.name()).append(" ").append(student.grade()).append(\n);
+        for (Student student : students ) {
+            result.append(student.name).append(" ").append(student.grade).append('\n');
         }
+        return result.toString();
     }
 }

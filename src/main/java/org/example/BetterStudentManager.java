@@ -23,7 +23,7 @@ public class BetterStudentManager {
     public void removeStudent(String name) {
         // This method should remove the student with the given name from the list of students
         String removedStudent = students.remove(name);
-        System.out,println(students);
+        System.out.println(students);
     }
 
     public String getStudentList() {
